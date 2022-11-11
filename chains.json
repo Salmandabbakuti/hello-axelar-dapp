@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Moonbeam",
+    "chainId": 1287,
+    "gateway": "0x5769D84DD62a6fD969856c75c7D321b84d455929",
+    "rpc": "https://moonbeam-alpha.api.onfinality.io/public",
+    "gasReceiver": "0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6",
+    "messageSender": "0x7d9daBF118482B47ea6D900f0221aB1ECDb19a7a",
+    "greeterAddress": "0xF8d0eF7BB673d2c9a0Faf2f81c71496892d1295a"
+  },
+  {
+    "name": "Avalanche",
+    "chainId": 43113,
+    "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
+    "gateway": "0xC249632c2D40b9001FE907806902f63038B737Ab",
+    "gasReceiver": "0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6",
+    "messageReceiver": "0x83A0B81D42AC6d9AeD9b0ECa9D1bda398f3481e7",
+    "greeterAddress": "0x12E14e3aaD07183568E0d18385a03faE5310fBe3"
+  }
+]
