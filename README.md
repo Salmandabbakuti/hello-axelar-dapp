@@ -32,7 +32,7 @@ yarn hardhat help # shows help
 
 ![Demo](https://github.com/Salmandabbakuti/hello-axelar-dapp/blob/main/screenshot.png)
 
-![Demo Web](https://github.com/Salmandabbakuti/hello-axelar-dapp/blob/main/web.png)
+![Demo Web](https://github.com/Salmandabbakuti/hello-axelar-dapp/blob/feat/client/web.png)
 
 ```bash
 D:\salman\hello-axelar-dapp>yarn contracts:execute
