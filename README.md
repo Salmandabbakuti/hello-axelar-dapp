@@ -32,6 +32,8 @@ yarn hardhat help # shows help
 
 ![Demo](https://github.com/Salmandabbakuti/hello-axelar-dapp/blob/main/screenshot.png)
 
+![Demo Web](https://github.com/Salmandabbakuti/hello-axelar-dapp/blob/main/web.png)
+
 ```bash
 D:\salman\hello-axelar-dapp>yarn contracts:execute
 yarn run v1.22.19
