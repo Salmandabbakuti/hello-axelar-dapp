@@ -234,10 +234,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          &copy; Salman Dabbakuti. Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          © 2022 Salman Dabbakuti. Built with Axelar
         </a>
       </footer>
     </div>
