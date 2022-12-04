@@ -9,7 +9,6 @@ import {
   useNetwork
 } from "wagmi";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import chains from "../chains.json";
@@ -101,6 +100,7 @@ export default function Home() {
 
   const handleAvalancheSetGreeting = async () => {
     try {
+      if (/^\s*$/.test(messageToMoonbeamInput)) return setLogMessage("Message cannot be empty");
       if (chain.id !== 43113) return alert("Switch to Avalanche C-Chain");
       const tx = await avalancheContract.setGreeting(
         "Moonbeam",
@@ -125,6 +125,8 @@ export default function Home() {
 
   const handleMoonbeamSetGreeting = async () => {
     try {
+      // check if message is empty
+      if (/^\s*$/.test(messageToAvalancheInput)) return setLogMessage("Message cannot be empty");
       if (chain.id !== 1287) return alert("Switch to Moonbeam Alpha Testnet");
       const tx = await moonbeamContract.setGreeting(
         "Avalanche",
@@ -177,11 +179,16 @@ export default function Home() {
             <div className={styles.card}>
               <h2>Moonbeam</h2>
               <img src="/assets/moonbeam.png" alt="moonbeam-banner" />
-              <p>{moonbeamGreeting}</p>
+              {/* greeting with message avatar */}
+              {/* image as avatar */}
+              <div className={styles.avatar}>
+                <img class={styles.imageAvatar} src="/assets/avalanche.jpg" alt="avalanche-avatar" />
+                <p className={styles.messageBubble}>{moonbeamGreeting}</p>
+              </div>
               <input
                 type="text"
                 className={styles.input}
-                placeholder="Enter your message"
+                placeholder="Write a message to Avalanche"
                 value={messageToAvalancheInput}
                 onChange={(e) => setMessageToAvalancheInput(e.target.value)}
               />
@@ -196,11 +203,14 @@ export default function Home() {
             <div className={styles.card}>
               <h2>Avalanche</h2>
               <img src="/assets/avalanche.jpg" alt="avalanche-banner" />
-              <p>{avalancheGreeting}</p>
+              <div className={styles.avatar}>
+                <img class={styles.imageAvatar} src="/assets/moonbeam.png" alt="moonbeam-avatar" />
+                <p className={styles.messageBubble}>{avalancheGreeting}</p>
+              </div>
               <input
                 className={styles.input}
                 type="text"
-                placeholder="Enter your message"
+                placeholder="Write a message to Moonbeam"
                 value={messageToMoonbeamInput}
                 onChange={(e) => setMessageToMoonbeamInput(e.target.value)}
               />

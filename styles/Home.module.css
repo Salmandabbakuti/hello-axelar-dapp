@@ -24,6 +24,40 @@
   cursor: pointer;
 }
 
+/* message bubble with left triangle */
+
+.messageBubble {
+  background-color: #cddcec;
+  color: #111;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: .4em;
+}
+
+.messageBubble:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #cddcec;
+  border-top: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.imageAvatar {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .input {
   width: 100%;
   padding: 12px 20px;

@@ -22,6 +22,12 @@ yarn hardhat contracts:execute # executes contract functionality
 yarn hardhat help # shows help
 ```
 
+##### Starting the frontend
+
+```shell
+yarn dev
+```
+
 #### Demo:
 
 1. Moonbeam Contract Address: [0xF8d0eF7BB673d2c9a0Faf2f81c71496892d1295a]: https://moonbase.moonscan.io/address/0xF8d0eF7BB673d2c9a0Faf2f81c71496892d1295a
